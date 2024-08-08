@@ -1,0 +1,195 @@
+*{
+    padding:0%;
+    margin:0%;
+}
+#game{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    /*border: 1px solid black;background: linear-gradient(to right, #020101, #761717);*/
+    background-image: url(2D-Planet-Game-Backgrounds.jpg);
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    animation: moveBackground 7s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -800px ;
+    }
+}
+
+body {
+    background-color:whitesmoke;
+}
+.particle {
+    fill: rgb(188, 26, 159);
+    animation: fade 5s infinite;
+}
+
+@keyframes fade{
+   0%{
+    opacity: 1;
+}
+
+50% {
+    opacity: 1;
+    transform: translate(-10%, -10%);
+}
+75% {
+    opacity: 0.5
+}
+
+100% {
+    opacity: 0;
+    transform: translate(-10%, -10%)
+}
+}
+
+.legs{
+    fill: #c60b0b;
+    transform: rotate(0deg);
+    animation:forwardAnimation 0.5s forwards linear infinite;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}
+.block {
+    fill:rgb(0, 0, 0);
+}
+rect x {
+    fill:#0d259c;
+}
+.l{
+    fill: #2cacba;
+    transform: rotate(0deg);
+    animation: 1s forwards linear infinite;
+}
+.le{
+    fill: #06b715;
+    transform: rotate(0deg);
+    animation: rotateAnimation 2s linear infinite;
+}
+.leg{
+    fill: #730fc5;
+    transform: rotate(0deg);
+    animation: rotateAnimation 4s linear infinite;
+}
+.legss{
+    fill: #c12c85;
+    transform: rotate(0deg);
+    animation: rotateAnimation 3s linear infinite;
+}
+.legsss{
+    fill: #6328bc;
+    transform: rotate(0deg);
+    animation: rotateAnimation 1s linear infinite;
+}
+.part{
+    fill: rgb(153, 136, 31);
+    animation: fade 2.5s infinite;
+}
+.parti{
+    fill: rgb(188, 33, 33);
+    animation: fade 1s infinite;
+}
+
+  @keyframes forwardAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(20px);
+    }
+  }
+
+
+#svg {  
+    width: 50px; 
+    height: 70px;
+    position: relative;
+    top: 125px;
+    left: 120px;
+}
+.animate{
+    animation: jump 800ms;
+}
+
+@keyframes jump{
+    0%{top: 125px;}
+    30%{top: 30px;}
+    70%{top: 30px;}
+    100%{top: 125px;}
+}
+
+.line {
+    animation: moveUp 0.2s linear infinite;
+    stroke: white;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-500px);
+    }
+}
+
+/*#block{
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    position:relative;
+    top: 80px;
+    left: 490px;
+    animation: block 1s infinite linear;
+}*/
+@keyframes block{
+    0%{left: 500px;}
+        100%{left:-20px;}
+}
+#bm{
+    width: 20px; 
+    height: 20px;
+    position: relative;
+    top: 110px;
+    left: 380px;
+    animation: opp 1s infinite linear;
+}
+@keyframes opp{
+    0%{left: 380px;}
+        100%{left:-100px;} 
+}
+#olb{
+    width: 20px; 
+    height: 70px;
+    position: relative;
+    top: 135px;
+    left: 400px;  
+    animation: opps 5s infinite linear; 
+}
+@keyframes opps{
+    0%{left: 400px;}
+        100%{left:-80px;} 
+}
+#eye{
+    width: 20px; 
+    height: 20px;
+    position: relative;
+    top: 110px;
+    left: 427px;
+    animation: oppse 2s infinite linear;
+}
+@keyframes oppse{
+    0%{left: 427px;}
+        100%{left:-60px;}
+}
